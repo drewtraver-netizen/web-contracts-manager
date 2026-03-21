@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — Contracts Manager</title>
+  <meta name="description" content="Support and contact information for Contracts Manager by A2e Technologies." />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .support-body {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 72px 24px 96px;
+    }
+    .support-body h1 {
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+    }
+    .support-sub {
+      font-size: 17px;
+      color: var(--muted);
+      margin-bottom: 56px;
+    }
+    .support-body h2 {
+      font-size: 20px;
+      font-weight: 700;
+      margin: 48px 0 16px;
+      color: #fff;
+    }
+    .support-body p, .support-body li {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+    .support-body ul {
+      margin: 0 0 16px 20px;
+    }
+    .support-body ul li { margin-bottom: 6px; }
+
+    /* Contact card */
+    .contact-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 32px 36px;
+      margin-top: 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 28px;
+    }
+    .contact-icon {
+      font-size: 36px;
+      flex-shrink: 0;
+    }
+    .contact-info h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    .contact-info p {
+      margin-bottom: 6px;
+    }
+    .contact-info a {
+      color: var(--accent);
+    }
+    .contact-info a:hover { color: var(--accent-hover); }
+
+    /* FAQ */
+    .faq-item {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-bottom: 12px;
+    }
+    .faq-item h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .faq-item p {
+      margin: 0;
+    }
+    code {
+      background: rgba(255,255,255,0.07);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">Contracts Manager</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="support.html" class="active">Support</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="support-body">
+    <h1>Support</h1>
+    <p class="support-sub">We're here to help. Reach out any time or browse the FAQ below.</p>
+
+    <!-- Contact -->
+    <h2>Contact Us</h2>
+    <div class="contact-card">
+      <div class="contact-icon">✉️</div>
+      <div class="contact-info">
+        <h3>A2e Technologies</h3>
+        <p>Email: <a href="mailto:info@a2etechnologies.com">info@a2etechnologies.com</a></p>
+        <p>Website: <a href="https://a2etechnologies.com" target="_blank" rel="noopener">a2etechnologies.com</a></p>
+        <p>San Diego, CA</p>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <h3>Where is my data stored?</h3>
+      <p>All data is stored locally on your Mac in <code>~/Library/Application Support/ContractsManager/</code>. Nothing is sent to the cloud or any external server.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How do I back up my database?</h3>
+      <p>Go to <strong>File → Save Database…</strong> (⌘S) to export a portable JSON file. You can restore it on any Mac running Contracts Manager via <strong>File → Open Database…</strong> (⌘O).</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How do I add a contract type or requirement?</h3>
+      <p>Use the <strong>Manage</strong> menu in the toolbar. Choose <em>Contract List</em> to add contract types, or <em>Contract Requirements List</em> to add FAR/DFAR clauses and other requirements to the global library.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What does "Mark as Reviewed" do for perpetual contracts?</h3>
+      <p>Right-clicking a perpetual contract and choosing <strong>Mark as Reviewed</strong> stamps today's date on that contract. The Old Perpetual age warning then counts from the review date instead of the original signing date — effectively resetting the clock and creating an audit trail.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How do I set up the renewal and old perpetual warnings?</h3>
+      <p>Go to <strong>Manage → Set Periodic Renewal Period</strong> to configure how many days before expiration you want the renewal alert. Go to <strong>Manage → Set Old Perpetual Period</strong> to set the age threshold (in years) for perpetual contract warnings. Set either to 0 to disable it.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>When do notifications fire?</h3>
+      <p>For any contract with <em>Renews on Expiration</em> enabled, Contracts Manager schedules a macOS notification 45 days before the contract expires. Make sure notification permission is granted in <strong>System Settings → Notifications → Contracts Manager</strong>.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Can I use my own company logo?</h3>
+      <p>Yes. Go to <strong>Edit → Change Logo…</strong> to replace the sidebar logo with a PNG, JPG, TIFF, or GIF. The image is saved and persists across launches. Use <strong>Edit → Remove Logo</strong> to revert to the default.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What macOS version is required?</h3>
+      <p>Contracts Manager requires <strong>macOS 14 Sonoma</strong> or later.</p>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <span>© 2026 A2e Technologies · San Diego, CA</span>
+      <span><a href="mailto:info@a2etechnologies.com">info@a2etechnologies.com</a></span>
+    </div>
+  </footer>
+
+</body>
+</html>
